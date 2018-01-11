@@ -2,7 +2,7 @@ def wsgi_application(environ, start_response):
 
   body = ""
 
-  for query in env['QUERY_STRING'].split("&"):
+  for query in environ['QUERY_STRING'].split("&"):
         body += query + "\n"
         
   status = '200 OK'
